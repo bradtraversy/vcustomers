@@ -40,7 +40,7 @@
       fetchCustomers(){
         this.$http.get('http://slimapp/api/customers')
           .then(function(response){
-            this.customers = JSON.parse(response.body);
+            this.customers = response.body;
           });
       },
       filterBy(list, value){

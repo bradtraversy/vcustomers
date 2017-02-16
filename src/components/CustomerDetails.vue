@@ -32,7 +32,7 @@ export default {
       fetchCustomer(id){
           this.$http.get('http://slimapp/api/customer/'+id)
           .then(function(response){
-            this.customer = JSON.parse(response.body);
+            this.customer = response.body;
           });
       },
       deleteCustomer(id){
